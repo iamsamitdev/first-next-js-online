@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
-
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const Button = styled.button`
   background-color:blue;
@@ -18,8 +18,11 @@ export default function Home() {
       <h1 style={{color:'red','border':'1px solid #000'}}>Index Page</h1>
       <p className="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod et doloribus quasi eligendi, cumque vel nobis voluptates illo magni ratione fugiat, non iure eveniet ex, esse tempora inventore sapiente saepe.</p>
       
-      <style jsx>
+      <style global>
         {`
+          body{
+            background-color:pink;
+          }
           .desc{
             background-color:yellow;
           }
@@ -28,6 +31,11 @@ export default function Home() {
       </style>
 
       <img src="/images/girl.jpg" alt="" width="200" />
+
+      <Link href="/member/dashboard">
+        <a>Go to member dashboard</a>
+      </Link>
+
     </div>
   )
 }
